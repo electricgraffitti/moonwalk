@@ -1,4 +1,4 @@
-:ruby: ree
+:ruby: ree187
 :application: moonwalk
 :user: rails
 #:time_zone: UTC
@@ -12,6 +12,7 @@
   - moonwalkcardio.org
   - moonwalkcardioantigravitycenter.com
   - moonwalkcardioantigravitycenter.net
+  - moonwalk.cube2media.com
 
 :repository: git@github.com:electricgraffitti/moonwalk.git
 :branch: master
@@ -47,6 +48,7 @@
 :passenger:
   :max_pool_size: 2
   :use_global_queue: true
+  :version: 2.2.15
 :mysql:
   :innodb_buffer_pool_size: 32M
 
