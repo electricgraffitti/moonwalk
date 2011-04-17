@@ -1,0 +1,46 @@
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.7.0/build/yahoo-dom-event/yahoo-dom-event.js&2.7.0/build/element/element-min.js&2.7.0/build/datasource/datasource-min.js&2.7.0/build/datatable/datatable-min.js"></script>
+
+<h1>Subscription List</h1>
+<% if @subscriptions.empty? %>
+  You do not have any subscriptions
+<% else %>
+
+<div id="subscriptions_table_wrap">
+<table id="subscriptions_table">
+  <!-- <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr> -->
+
+<% @subscriptions.each do |subscription| %>
+  <tr>
+    <td><%=h subscription.name %></td>
+    <td><%=h subscription.email %></td>
+    <td><%=h (subscription.created_at).to_s(:table_date) %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<%= link_to "Dashboard", admins_path, :class => 'dash_btn btn' %>
+
+<script type="text/javascript">
+var myDataSource = new YAHOO.util.DataSource(YAHOO.util.Dom.get("subscriptions_table"));
+myDataSource.responseType = YAHOO.util.DataSource.TYPE_HTMLTABLE;
+myDataSource.responseSchema = {
+    fields: [
+      {key:"Subscriber Name"},
+      {key:"Subscriber Email"},
+      {key:"Subscription Date"}
+    ]
+};
+
+var myColumnDefs = [
+  {key:"Subscriber Name"},
+  {key:"Subscriber Email"},
+  {key:"Subscription Date"}
+];
+
+var myDataTable = new YAHOO.widget.DataTable("subscriptions_table_wrap", myColumnDefs, myDataSource);
+</script>
+
+<% end %>

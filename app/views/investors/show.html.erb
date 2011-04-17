@@ -1,0 +1,13 @@
+<p>
+  <b>Username:</b>
+  <%=h @investor.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @investor.password %>
+</p>
+
+
+<%= link_to 'Edit', edit_investor_path(@investor) %> |
+<%= link_to 'Back', investors_path %>

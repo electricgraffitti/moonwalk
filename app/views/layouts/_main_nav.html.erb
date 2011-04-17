@@ -1,0 +1,17 @@
+<div id="main_nav" class="grid_12 alpha omega round2">
+  <div id="anti_gravity_text">Anti Gravity Center</div>
+  <ul id="main_nav_ul" class="nav_ul">
+    <li class="main_nav_li nav1 highlight"><%= link_to "Home", home_path, :id => "home", :class => "main_nav_a" %></li>
+    <li class="main_nav_li nav2 highlight"><%= link_to "About", about_path, :id => "about", :class => "main_nav_a" %></li>
+    <li class="main_nav_li nav3 highlight"><%= link_to "Media", media_path, :id => "marketing", :class => "main_nav_a" %></li>
+    <% if current_investor %>
+      <li class="main_nav_li nav6 highlight last">
+        <%= link_to "Logout", investor_logout_path, :id => 'logout', :class => "main_nav_a" %>
+      </li>
+    <% else %>
+      <li class="main_nav_li nav5 highlight last">
+        <%= link_to "Login", investor_login_path, :id => 'login', :class => "main_nav_a" %>
+      </li>
+    <% end %>
+  </ul>
+</div>

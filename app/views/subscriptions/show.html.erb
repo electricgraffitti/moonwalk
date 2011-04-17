@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @subscription.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @subscription.email %>
+</p>
+
+<p>
+  <b>Product updates:</b>
+  <%=h @subscription.product_updates %>
+</p>
+
+<p>
+  <b>Potential investor:</b>
+  <%=h @subscription.potential_investor %>
+</p>
+
+
+<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
+<%= link_to 'Back', subscriptions_path %>

@@ -1,0 +1,19 @@
+<% form_for(@subscription) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    Sign up for our mailing list
+  </p>
+  <div class="clear"></div>
+  <p>
+    <%= f.submit 'Sign Up', :class => 'btn' %>
+  </p>
+<% end %>

@@ -1,0 +1,35 @@
+<% content_for :banner do %>
+  <%= render :partial => "moonwalk/index_banner" %>
+<% end %>
+<%= render :partial => "moonwalk/sub_boxes" %>
+<%#= render :partial => "moonwalk/secondary_boxes" %>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+
+   var player = $f("index_player", "swfs/flowplayer-3.1.3.swf", {
+  	 version:[9, 115],
+  	 bgcolor: "#000000",
+  	 canvas: {
+  		 background: '#000000',
+  		 backgroundGradient: 'none'
+  	 },
+  	 screen: {
+  		 backgroundColor: '#000000',
+  		 backgroundGradient: 'none'
+  	 },
+  	plugins: {
+  	  controls: null
+    },
+
+  	 clip: {
+  	 	url: "videos/promo_video1.f4v",
+  	 	autoPlay: false,
+  	 	autoBuffering: true,
+  	 	fadeInSpeed: 5000,
+  	 	scaling: "orig",
+  	 	backgroundColor: '#000000'
+  	 }
+   });
+  });
+</script>

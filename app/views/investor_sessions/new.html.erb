@@ -1,0 +1,17 @@
+<% page_title("Login ") %>
+
+<div class="grid_12 alpha omega">
+  <div class="grid_4 alpha omega index_box yellow_grad round2">
+    <div class="badge blue_badge runner_blue"></div>
+    <h1>Login</h1>
+    <div class="clear"></div>
+    <div class="full_wrap">    
+      <%= render :partial => 'investor_sessions/form' %>
+      <%= link_to 'Back', root_path, :class => 'btn' %>
+    </div>
+  </div>
+  <div class="login_banner grid_8 omega">
+
+<div class="login_img_wrap round2">    <%= image_tag('login_banner.png', :class => "round2") %></div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<h1>Setup Investor</h1>
+
+<% form_for(@investor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.submit 'Setup', :class => "btn" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', investors_path, :class => 'btn' %>

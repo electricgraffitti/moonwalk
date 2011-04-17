@@ -1,0 +1,20 @@
+<h1>Editing investor</h1>
+
+<% form_for(@investor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @investor %> |
+<%= link_to 'Back', investors_path %>

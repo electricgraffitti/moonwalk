@@ -1,0 +1,22 @@
+<h1>Listing investors</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+  </tr>
+
+<% @investors.each do |investor| %>
+  <tr>
+    <td><%=h investor.username %></td>
+    <td><%=h investor.password %></td>
+    <td><%= link_to 'Show', investor %></td>
+    <td><%= link_to 'Edit', edit_investor_path(investor) %></td>
+    <td><%= link_to 'Destroy', investor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New investor', new_investor_path %>

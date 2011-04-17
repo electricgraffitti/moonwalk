@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: subscriptions
+#
+#  id                 :integer(4)      not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  product_updates    :boolean(1)
+#  potential_investor :boolean(1)
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  product_updates: false
+  potential_investor: false
+
+two:
+  name: MyString
+  email: MyString
+  product_updates: false
+  potential_investor: false
